@@ -1,0 +1,35 @@
+/**
+* React Static Boilerplate
+* https://github.com/kriasoft/react-static-boilerplate
+*
+* Copyright © 2015-present Kriasoft, LLC. All rights reserved.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE.txt file in the root directory of this source tree.
+*/
+
+.card_picture {
+  overflow: hidden;
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+  margin: 0px 5px 0px 5px;
+}
+
+img {
+  width: 100%; /* you can use % */
+  height: auto;
+}
+
+.card_picture_selected  {
+  overflow: hidden;
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+  margin: 0px 5px 0px 5px;
+  outline: 3px solid yellow !important;
+}
+
+.picked {
+  outline: 5px solid greenyellow !important;
+}

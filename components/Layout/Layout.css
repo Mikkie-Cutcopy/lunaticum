@@ -1,0 +1,122 @@
+/**
+ * React Static Boilerplate
+ * https://github.com/kriasoft/react-static-boilerplate
+ *
+ * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+.content {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+.root_c {
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+  border: 3px solid #73AD21;
+}
+.head_c {
+  background-color: #6776ff;
+  height: 15%;
+  width: 100%;
+}
+
+.logo-c {
+  display: inline-block;
+  background-color: #B11A6D;
+  float: left;
+  height: 100%;
+  width: 30%;
+}
+
+
+
+.actions-c {
+  display: inline-block;
+  background-color: #B11A6D;
+  float: right;
+  height: 100%;
+  width: 30%;
+}
+
+.main_c {
+  background-color: #B11A6D;
+  height: 60%;
+  width: 100%;
+}
+
+.fill {
+  min-height: 100%;
+  height: 100%;
+}
+
+.gamers_c {
+  float: left;
+}
+
+.tabs-c {
+  border: 1px solid #73AD21;
+  float: right;
+  width: 5%;
+}
+
+.game_field_c {
+  border: 1px solid #73AD21;
+  width: 100%;
+  height: 50%;
+}
+
+.gamers_field_c {
+  border: 1px solid #73AD21;
+  width: 100%;
+  height: 50%;
+}
+
+
+
+.card {
+  display: inline-block;
+  border: 1px solid #73AD21;
+  height: 100%;
+  width: 50px;
+}
+
+.cards_field {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.cards_container {
+  display: inline-block;
+  vertical-align: middle;
+  height: 94%;
+  width: 90%;
+}
+
+.tabs-c {
+  width: 30%;
+  display: inline-block;
+
+}
+
+.g-tab {
+  border: 1px solid #73AD21;
+  display: inline-block;
+  float: right;
+  width: 50%
+}
+
+.nav-c {
+  border: 1px solid #73AD21;
+}
+
+.footer_c {
+  background-color: #94B133;
+  height: 25%;
+  width: 100%;
+}

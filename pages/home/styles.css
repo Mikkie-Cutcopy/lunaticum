@@ -1,0 +1,146 @@
+/**
+ * React Static Boilerplate
+ * https://github.com/koistya/react-static-boilerplate
+ *
+ * Copyright © 2015-2016 Konstantin Tarkus (@koistya)
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@media screen and (max-width: 1024px) {
+
+  .root {
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    border: 3px solid #73AD21;
+  }
+  .head-c {
+    background-color: #6776ff;
+    height: 20%;
+    width: 100%;
+  }
+
+  .logo-c {
+    display: inline-block;
+    background-color: #B11A6D;
+    float: left;
+    height: 100%;
+    width: 30%;
+  }
+
+
+
+  .actions-c {
+    display: inline-block;
+    background-color: #B11A6D;
+    float: right;
+    height: 100%;
+    width: 30%;
+  }
+
+  .main-c {
+    background-color: #B11A6D;
+    height: 50%;
+    width: 100%;
+  }
+
+  .fill {
+    min-height: 100%;
+    height: 100%;
+  }
+
+  .gamers-c {
+    float: left;
+  }
+
+  .tabs-c {
+    border: 1px solid #73AD21;
+    float: right;
+    width: 5%;
+  }
+
+  .game-field-c {
+    border: 1px solid #73AD21;
+    width: 100%;
+    height: 50%;
+  }
+
+  .gamer-field-c {
+    border: 1px solid #73AD21;
+    width: 100%;
+    height: 50%;
+  }
+
+  .gamers-c {
+    border: 1px solid #73AD21;
+
+    .gamer {
+      padding-left: 5px;
+      padding-right: 5px;
+      display: inline-block;
+      border: 1px solid #73AD21;
+      height: 100%;
+      float: left;
+    }
+  }
+
+  .card {
+    display: inline-block;
+    border: 1px solid #73AD21;
+    height: 100%;
+    width: 50px;
+  }
+
+  .cards_field {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  img {
+    width: 100%; /* you can use % */
+    height: auto;
+  }
+
+  .cards_container {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 70%;
+  }
+
+  .card_picture {
+    overflow: hidden;
+    border: 1px solid #73AD21;
+    display: inline-block;
+    width: 7%;
+    height: 100%;
+    margin: 0px 5px 0px 5px;
+  }
+
+  .tabs-c {
+    width: 30%;
+    display: inline-block;
+
+  }
+
+  .g-tab {
+    border: 1px solid #73AD21;
+    display: inline-block;
+    float: right;
+    width: 50%
+  }
+
+  .nav-c {
+    border: 1px solid #73AD21;
+  }
+
+  .footer-c {
+    background-color: #94B133;
+    height: 30%;
+    width: 100%;
+  }
+
+}
