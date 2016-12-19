@@ -13,10 +13,15 @@ import s from './ControlButton.css';
 
 class ControlButton extends React.Component {
 
+  buttonName() {
+    //if (this.props.level === 0)
+    return 'Select'
+  }
+
   render() {
     return (
       <button className={s.control_button} onClick={() => this.props.onClick()} >
-        <p>Выбрать</p>
+        <p>{this.buttonName()}</p>
       </button>
     );
   }

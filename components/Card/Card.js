@@ -43,7 +43,7 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div className={this.cardClass()} onClick={() => this.props.onClick()}>
+      <div className={this.cardClass()} onClick={() => this.props.onClick()} onDoubleClick={() => this.props.onDoubleClick()}>
         <img src={this.cardImage()}/>
       </div>
     );
