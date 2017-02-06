@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    amq-protocol (2.0.1)
+    amqp (1.6.0)
+      amq-protocol (>= 2.0.1)
+      eventmachine
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    em-websocket-client (0.1.2)
+      eventmachine
+      websocket
+    eventmachine (1.2.0.1)
+    http_parser.rb (0.6.0)
+    websocket (1.2.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  amqp
+  em-websocket
+  em-websocket-client
+
+BUNDLED WITH
+   1.12.5
