@@ -1,4 +1,5 @@
-class Lunaticum::Game::Iteration
+Lunaticum::Game
+class Iteration < BaseModel
 
   def initialize(token)
     @word = store.word
@@ -7,7 +8,5 @@ class Lunaticum::Game::Iteration
   def set_word!
 
   end
-
-
 
 end

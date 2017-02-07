@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module Lunaticum::Service::GameStore
 
   def store
@@ -14,5 +16,10 @@ module Lunaticum::Service::GameStore
 
   def store_val_from(key)
     [:player, @auth_token, key].map(&:to_s).join(':')
+  end
+
+  def generate_token
+    token = SecureRandom.hex 6
+    store.get(token) ? token : generate_token
   end
 end

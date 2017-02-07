@@ -1,12 +1,10 @@
-class Lunaticum::Game::Player
-  include Lunaticum::Service::GameStore
-
+module Lunaticum::Game
+class Player < BaseModel
   attr_reader :auth_token, :iteration, :player
 
-  def initialize(auth_token)
-    @auth_token = auth_token
-    #@player = Player.new(auth_token)
-    @iteration = Match.new(game_auth_token).current_iteration
+  def initialize(auth_token=nil)
+    super
+    @iteration = Match.new(player_token: auth_token).current_iteration
   end
 
   def hundle(action)
@@ -44,4 +42,5 @@ class Lunaticum::Game::Player
   def action_rights
     @action_rights ||= ActionRights.new(iteration: iteration, player: player)
   end
+end
 end

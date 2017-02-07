@@ -55,7 +55,7 @@ class Layout extends React.Component {
 
   componentDidMount() {
     //let room_num = window.location.href.split(/room\//);
-    this.socket = new WebSocket("ws://localhost:3030/socket/room/12345");
+    this.socket = new WebSocket("ws://localhost:3030/socket/");
 
     this.socket.onopen = () => console.log('connect') ;
     this.socket.onmessage = (data) => console.log(data) ;

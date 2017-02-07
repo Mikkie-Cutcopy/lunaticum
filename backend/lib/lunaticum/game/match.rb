@@ -1,11 +1,10 @@
-class Lunaticum::Game::Match
+module Lunaticum::Game
+  class Match < BaseModel
+    attr_reader :current_iteration, :token
 
-  attr_reader :current_iteration, :token
+    def initialize(options={})
 
-  def initialize(token)
-    @token = token
-    @current_iteration = Iteration.new(store.current_iteraton_token)
+      @current_iteration = Iteration.new(store.current_iteraton_token)
+    end
   end
-
-
 end
