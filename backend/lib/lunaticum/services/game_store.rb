@@ -1,25 +1,60 @@
 require 'securerandom'
+require 'redis'
+require 'json'
 
 module Lunaticum::Service::GameStore
 
   def store
-    @redis ||= Redis.new(:host => "localhost", :port => 6379)
+    @store ||= Store.new(token)
   end
 
-  def game_auth_token
-    @game_auth_token = store.get(store_val_from(:current_game_token))
-  end
+  class Store
 
-  def score
-    @score = store.get(store_val_from(:score))
-  end
+    attr_reader :token
 
-  def store_val_from(key)
-    [:player, @auth_token, key].map(&:to_s).join(':')
-  end
+    def initialize(token=nil)
+      @token = token || generate_token
+    end
 
-  def generate_token
-    token = SecureRandom.hex 6
-    store.get(token) ? token : generate_token
+    # store.random_key = val
+    # srore.random_key
+    # => val
+    def method_missing(method_name, *args)
+      if /(?<set_method>.+)=$/ =~ method_name
+        set_value(object.merge(set_method => args[0]))
+      else
+        object[method_name.to_s]
+      end
+    end
+
+    def object
+      set_initial_value unless get_value
+      JSON.parse( get_value )
+    end
+
+    private
+
+    def set_initial_value
+      return if get_value
+      set_value({})
+    end
+
+    def set_value(val)
+      redis.set(@token, val.to_json)
+    end
+
+    def get_value
+      redis.get(token)
+    end
+
+    def redis
+      @redis ||= Redis.new(:host => "localhost", :port => 6379)
+    end
+
+    def generate_token
+      token = SecureRandom.hex 8
+      redis.get(token) ? generate_token : token
+    end
+
   end
 end

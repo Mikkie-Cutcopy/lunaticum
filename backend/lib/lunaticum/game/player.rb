@@ -8,7 +8,7 @@ module Lunaticum::Game
       @game_state    = Services::GameState.new(self)
       @action_rights = Policies::PlayerPolicy.new(iteration: iteration, player: self)
     end
- 
+
     def hundle(action)
 
       #проверяем что игрок имеет право на действие

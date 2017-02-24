@@ -1,7 +1,8 @@
 Lunaticum::Game
 class Iteration < BaseModel
 
-  def initialize(token)
+  def initialize(match)
+    @match = match
     @word = store.word
   end
 

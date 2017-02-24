@@ -3,8 +3,18 @@ module Lunaticum::Game
     attr_reader :current_iteration, :token
 
     def initialize(options={})
+      @token = options[:token]
+      @current_iteration = Iteration.new(self)
+    end
 
-      @current_iteration = Iteration.new(store.current_iteraton_token)
+    #создаем инфраструктуру новой игры в редис
+    class Builder
+
+      def self.start!(deck=nil)
+        Match.new
+      end
+
+
     end
   end
 end

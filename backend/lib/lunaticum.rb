@@ -12,6 +12,7 @@ module Lunaticum
   end
 
   module Game
+    require_relative 'lunaticum/game/base_model'
     require_relative 'lunaticum/game/iteration'
     require_relative 'lunaticum/game/match'
     require_relative 'lunaticum/game/player'
