@@ -2,7 +2,7 @@ require 'securerandom'
 require 'redis'
 require 'json'
 
-module Lunaticum::Service::GameStore
+module Lunaticum::Utils
 
   def store
     @store ||= Store.new(token)
@@ -11,6 +11,14 @@ module Lunaticum::Service::GameStore
   class Store
 
     attr_reader :token
+
+    def self.create(options)
+      @type = options[:type]
+      @struct = options[:struct]
+      store = new
+      store.send(:set_value, @struct.merge(type: @type))
+      store
+    end
 
     def initialize(token=nil)
       @token = token || generate_token

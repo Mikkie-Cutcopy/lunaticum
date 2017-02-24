@@ -1,5 +1,5 @@
 #The web UI is located at: http://server-name:15672/
-class Lunaticum::Service::Rabbit
+class Lunaticum::Utils::Rabbit
 
   attr_accessor :incoming_queue, :outcoming_queue, :outcoming_queue_name
 

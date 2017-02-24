@@ -1,4 +1,4 @@
-class Lunaticum::Service::Message
+class Lunaticum::Utils::Message
 
   attr_accessor :player, :action, :params, :time
 

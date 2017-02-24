@@ -2,11 +2,15 @@ module Lunaticum::Game
   class Player < BaseModel
     attr_reader :auth_token, :iteration, :game_state
 
-    def initialize(auth_token=nil)
+    def self.find(token)
+
+    end
+
+    def initialize(token=nil)
       super
-      @iteration     = Match.new(player_token: auth_token).current_iteration
-      @game_state    = Services::GameState.new(self)
-      @action_rights = Policies::PlayerPolicy.new(iteration: iteration, player: self)
+      @iteration     = Match.find(auth_token).current_iteration
+      #@game_state    = Services::GameState.new(self)
+      #@action_rights = Policies::PlayerPolicy.new(iteration: iteration, player: self)
     end
 
     def hundle(action)
